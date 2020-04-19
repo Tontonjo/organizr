@@ -1,0 +1,17 @@
+# Command to quick start an Organizr docker container
+# EXAMPLE: correct with your settings
+# docker run -d \
+# --name=organizr \
+# -v <path to data>:/config \
+# To get gid and uid: enter "id USERNAME" where USERNAME is the user with sufficent rights on folder
+# Pour obtenir le gid et l'UID: entrer la commande "id NOMDUTILISATEUR" ou NOMDUTILISATEUR est l'utilisateur avec les droits d'accès
+# -e PGID=<gid> -e PUID=<uid>  \
+# -p 80:80 \
+# organizrtools/organizr-v2
+
+docker run -d \
+  --name=organizr \
+  -v /path/to/config:/config \
+  -e PGID=<gid> -e PUID=<uid>  \
+  -p 80:80 \
+  organizrtools/organizr-v2
