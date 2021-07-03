@@ -7,11 +7,11 @@
 # Pour obtenir le gid et l'UID: entrer la commande "id NOMDUTILISATEUR" ou NOMDUTILISATEUR est l'utilisateur avec les droits d'accès
 # -e PGID=<gid> -e PUID=<uid>  \
 # -p 80:80 \
-# organizrtools/organizr-v2
+# organizr/organizr
 
 docker run -d \
-  --name=organizr \
-  -v /path/to/config:/config \
-  -e PGID=<gid> -e PUID=<uid>  \
-  -p 80:80 \
-  organizrtools/organizr-v2
+--name=organizr \
+-v /path/to/config:/config \
+-e PGID=<gid> -e PUID=<uid>  \
+-p 80:80 \
+organizr/organizr
